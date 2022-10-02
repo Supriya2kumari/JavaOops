@@ -1,0 +1,35 @@
+// Multilevel inheritance 
+
+class CodingContest {
+    void participation(){
+        System.out.println("All year of cs students are eligible to participate ");
+    }
+}
+class FirstYear extends CodingContest{
+    void level1(){
+         System.out.println("Level Easy...");
+    }
+}
+class SecondYear extends FirstYear {
+    void level2(){
+         System.out.println("Level Medium...");
+    }
+}
+class ThirdYear extends SecondYear {
+    void level3(){
+         System.out.println("Level Hard...");
+    }
+}
+class FinalYear extends ThirdYear {
+    void level4(){
+         System.out.println("Level very Dificult...");
+    }
+    public static void main(String [] args){
+        FinalYear f = new FinalYear();
+        f.participation();
+        f.level1();
+        f.level2();
+        f.level3();
+        f.level4();
+    }
+}
